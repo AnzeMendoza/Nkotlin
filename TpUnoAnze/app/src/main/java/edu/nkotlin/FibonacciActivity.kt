@@ -21,7 +21,7 @@ class FibonacciActivity : AppCompatActivity() {
         siguienteNumero.setOnClickListener(
             View.OnClickListener {
 
-            val mostrarValorConvertido = findViewById<TextView>(R.id.tv_muestra_conversion)
+            val mostrarValorConvertido = findViewById<TextView>(R.id.tv_fibonacci_mostrar_siguiente)
             val siguienteFibonacci = calculoFibonacciSiguienteValor(numeroFibonacci.text.toString().toInt())
 
             if(siguienteFibonacci>0){
@@ -40,10 +40,11 @@ class FibonacciActivity : AppCompatActivity() {
     fun calculoFibonacciSiguienteValor(numero: Int): Int{
         var a = 0
         var b = 1
-
+        var aux = 0;
         while (a<numero){
+            aux = a
             a = b
-            b += a
+            b = a+aux
         }
 
         if(a==numero)
