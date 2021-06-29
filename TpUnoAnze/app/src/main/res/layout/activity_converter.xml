@@ -2,16 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tb_converter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConverterActivity" >
+    tools:context=".ConverterActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/e_converter_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Hola desde  converter" />
+        android:hint="Ingrese una temperatura"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_converter_fToC"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="F° to C°" />
+
+        <CheckBox
+            android:id="@+id/cb_converter_cToF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="C° to F°" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_converter_converter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="converter" />
+
 </LinearLayout>
