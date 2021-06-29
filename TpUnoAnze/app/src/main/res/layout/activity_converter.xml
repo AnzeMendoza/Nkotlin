@@ -39,4 +39,12 @@
         android:layout_height="wrap_content"
         android:text="converter" />
 
+    <TextView
+        android:id="@+id/tv_muestra_conversion"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
 </LinearLayout>
