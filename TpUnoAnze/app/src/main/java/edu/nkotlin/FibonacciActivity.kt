@@ -16,11 +16,19 @@ class FibonacciActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fibonacci)
+        initializeElements()
 
-        siguienteNumero.setOnClickListener(View.OnClickListener {
+        siguienteNumero.setOnClickListener(
+            View.OnClickListener {
+
             val mostrarValorConvertido = findViewById<TextView>(R.id.tv_muestra_conversion)
+            val siguienteFibonacci = calculoFibonacciSiguienteValor(numeroFibonacci.text.toString().toInt())
 
-
+            if(siguienteFibonacci>0){
+                mostrarValorConvertido.setText("El siguiente valor es : $siguienteFibonacci")
+            } else {
+                mostrarValorConvertido.setText("El valor ingresado no corresponde a un valor de la serie")
+            }
         })
     }
 
@@ -29,8 +37,18 @@ class FibonacciActivity : AppCompatActivity() {
         siguienteNumero = findViewById(R.id.b_fibonacci_siguiente)
     }
 
-    fun calculoFibonacci(){
+    fun calculoFibonacciSiguienteValor(numero: Int): Int{
+        var a = 0
+        var b = 1
 
+        while (a<numero){
+            a = b
+            b += a
+        }
+
+        if(a==numero)
+            return b
+        return 0
     }
 
 }

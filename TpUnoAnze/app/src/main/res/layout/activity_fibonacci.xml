@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Ingrese una numero Fibonacci" />
+        android:hint="Ingrese una numero Fibonacci"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tv_fibonacci_mostrar_siguiente"
