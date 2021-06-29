@@ -8,21 +8,20 @@
     tools:context=".FibonacciActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/e_fibonacci_numero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="Ingrese una numero Fibonacci" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_fibonacci_mostrar_siguiente"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:text="TextView" />
+        android:layout_height="36dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/b_fibonacci_siguiente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />
