@@ -8,10 +8,16 @@
     tools:context=".PalindromoActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/e_palindromo_frase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Hola desde Activity Palindromo" />
+        android:hint="Ingrese frase"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/b_palidromo_verificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar" />
 </LinearLayout>
