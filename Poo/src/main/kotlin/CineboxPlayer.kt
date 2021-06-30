@@ -5,7 +5,7 @@ class CineboxPlayer : MediaDownloader.DownloadListener {
 
     init {
         val mediaDownloader = MediaDownloader()
-        mediaDownloader.createDownloadThread(this)
+        mediaDownloader.downloadMedia(this)
     }
 
 }
