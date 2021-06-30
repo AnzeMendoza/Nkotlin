@@ -1,14 +1,14 @@
-// nulabilidad
-/*
-var a: Int = 3
-var b: Int? = null // le dice que puede ser un Int o un null
 
-print(a+b!!) // lanza la nullExceptionPointer si es que b es null
- */
 fun main(args: Array<String>) {
-    val mediaDownloader = MediaDownloader()
-    mediaDownloader.downloadMedia {
-        val success1 = it.play()
-        success1
+    // sobrecarga de equals
+
+    val movie1 = Movie("matrix",2)
+    val movie2 = Movie("matrix", 2)
+
+    if(movie1 == movie2){
+        println("los objetos son iguales")
+    } else {
+        println("los objetos son distintos ${movie1.hashCode()} ${movie2.hashCode()}")
     }
+    // me da distinto porque a esta comparando los hashcode, no el contenido de cada atributo
 }

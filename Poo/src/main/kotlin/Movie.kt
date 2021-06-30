@@ -10,5 +10,9 @@ class Movie(name: String, duration: Int, trailer: Trailer? = null, available: Bo
     override fun play(): Boolean {
         return super.play()
     }
+
+    override fun equals(other: Any?): Boolean {
+        return (other != null && other is Movie && other.name == this.name && other.duration == this.duration)
+    }
 }
 
