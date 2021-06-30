@@ -24,5 +24,15 @@ class Series(name: String, duration: Int, trailer: Trailer? = null, available: B
         } else {
             println("Movie $name is not available")
             false
-        }    }
+        }
+    }
+
+    override fun pause() {
+        println("Pausing series")
+
+    }
+
+    override fun playTrailer() {
+        println("Playing trailer from series")
+    }
 }

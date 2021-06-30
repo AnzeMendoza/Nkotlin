@@ -1,4 +1,4 @@
-open class Media (var name: String, var duration: Int, var trailer: Trailer? = null, var available: Boolean = true){
+abstract class Media (var name: String, var duration: Int, var trailer: Trailer? = null, var available: Boolean = true){
 
     companion object {
 
@@ -15,8 +15,9 @@ open class Media (var name: String, var duration: Int, var trailer: Trailer? = n
         }
     }
 
-    open fun play(): Boolean {
-        return if (available) {
+    abstract fun play(): Boolean
+    /*
+    return if (available) {
             if (duration > 0) {
                 for (i in 0 until duration) {
                     println("Playing movie $name")
@@ -30,14 +31,12 @@ open class Media (var name: String, var duration: Int, var trailer: Trailer? = n
             println("Movie $name is not available")
             false
         }
+     */
+    abstract fun pause()
+    abstract fun playTrailer()
+    /*
+    {
     }
-
-    fun pause() {
-        println("Movie paused")
-    }
-
-    fun playTrailer() {
-        trailer?.play(name) ?: println("No trailer available")
-    }
+    */
 
 }

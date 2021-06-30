@@ -1,14 +1,14 @@
 
 fun main(args: Array<String>) {
-    // sobrecarga de equals
+    val movie = Movie("matrix 2", 2)
+    val bb = Series("Breaking bad", 2)
+    bb.totalEpisodes = 2
+    // me permite objetos de las clases hijas
+    val list = mutableListOf<Media>()
+    list.add(movie)
+    list.add(bb)
 
-    val movie1 = Movie("matrix",2)
-    val movie2 = Movie("matrix", 2)
+    list[0].play()
+    list[1].play()
 
-    if(movie1 == movie2){
-        println("los objetos son iguales")
-    } else {
-        println("los objetos son distintos ${movie1.hashCode()} ${movie2.hashCode()}")
-    }
-    // me da distinto porque a esta comparando los hashcode, no el contenido de cada atributo
 }
