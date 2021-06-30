@@ -35,4 +35,8 @@ class Series(name: String, duration: Int, trailer: Trailer? = null, available: B
     override fun playTrailer() {
         println("Playing trailer from series")
     }
+
+    override fun toString(): String {
+        return name
+    }
 }

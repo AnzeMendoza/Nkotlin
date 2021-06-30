@@ -16,27 +16,19 @@ abstract class Media (var name: String, var duration: Int, var trailer: Trailer?
     }
 
     abstract fun play(): Boolean
-    /*
-    return if (available) {
-            if (duration > 0) {
-                for (i in 0 until duration) {
-                    println("Playing movie $name")
-                }
-                true
-            } else {
-                println("Movie $name duration is less than zero")
-                false
-            }
-        } else {
-            println("Movie $name is not available")
-            false
-        }
-     */
     abstract fun pause()
     abstract fun playTrailer()
-    /*
-    {
+
+    override fun equals(other: Any?): Boolean {
+        return (other != null && other is Media && other.name == this.name && other.duration == this.duration)
     }
-    */
+
+    override fun hashCode(): Int {
+        var result = name.hashCode()
+        result = 31 * result + duration
+        result = 31 * result + (trailer?.hashCode() ?: 0)
+        result = 31 * result + available.hashCode()
+        return result
+    }
 
 }
