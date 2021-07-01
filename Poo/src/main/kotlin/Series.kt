@@ -1,5 +1,6 @@
 class Series(name: String, duration: Int, trailer: Trailer? = null, available: Boolean = true) :
-    Media(name, duration, trailer, available) {
+    Media(name, duration, trailer, available),
+    Comparable<Series>{
     var totalEpisodes: Int = 0
     var totalSeasons: Int = 0
     var episodeDuration: Int = 0
@@ -38,5 +39,14 @@ class Series(name: String, duration: Int, trailer: Trailer? = null, available: B
 
     override fun toString(): String {
         return name
+    }
+
+    override fun compareTo(other: Series): Int {
+
+        // ordena Series por palabra
+        // return this.name.compareTo(other.name)
+
+        // ordena Series por totalEpisodes
+        return this.totalEpisodes - other.totalEpisodes
     }
 }
