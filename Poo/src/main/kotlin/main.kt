@@ -1,4 +1,3 @@
-
 fun main(args: Array<String>) {
     val breakingBad = Series("Breaking Bad", 1)
     val invincible = Series("Invincible", 1)
@@ -12,9 +11,7 @@ fun main(args: Array<String>) {
 
     // lista mutable - podemos modificarla a diferencia de las anteriores
     val seriesList = mutableListOf(breakingBad, invincible)
-    addIfNotInList(seriesList, tbbt)
-    addIfNotInList(seriesList, breakingBad)
-
+    seriesList.addIfNotInList(breakingBad)
     seriesList.sort()
     //playPlayList(seriesList)
 
@@ -25,19 +22,18 @@ fun main(args: Array<String>) {
     seriesMap[3] = tbbt
 
     val series = seriesMap[3] //seriesMap.get(3)
-    println(series)
 }
 
-fun addIfNotInList(seriesList: MutableList<Series>, series: Series){
-    if(!seriesList.contains(series)){
-        seriesList.add(series)
+fun <T>MutableList<T>.addIfNotInList(myObject: T) {
+    if (!this.contains(myObject)) {
+        this.add(myObject)
     } else {
-        println("Series $series is alredy in playlist")
+        println("Series $myObject is alredy in playlist")
     }
 }
 
-fun playPlayList(seriesList: MutableList<Series>){
-    for(series in seriesList){
+fun playPlayList(seriesList: MutableList<Series>) {
+    for (series in seriesList) {
         series.play()
     }
 }
