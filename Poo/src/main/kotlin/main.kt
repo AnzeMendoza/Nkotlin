@@ -16,8 +16,16 @@ fun main(args: Array<String>) {
     addIfNotInList(seriesList, breakingBad)
 
     seriesList.sort()
-    playPlayList(seriesList)
+    //playPlayList(seriesList)
 
+    val seriesMap = HashMap<Int, Series>()
+
+    seriesMap[1] = breakingBad
+    seriesMap.put(2, invincible)
+    seriesMap[3] = tbbt
+
+    val series = seriesMap[3] //seriesMap.get(3)
+    println(series)
 }
 
 fun addIfNotInList(seriesList: MutableList<Series>, series: Series){
