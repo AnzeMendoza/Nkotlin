@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_hero"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        tools:src="@tools:sample/avatars"/>
+
+    <EditText
+        android:id="@+id/et_name_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_hero"
+        android:layout_alignTop="@+id/iv_hero"
+        android:layout_marginStart="16dp"
+        android:hint="Superhero name"/>
+
+    <EditText
+        android:id="@+id/et_alter_ego"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_hero"
+        android:layout_alignBottom="@+id/iv_hero"
+        android:layout_marginStart="16dp"
+        android:hint="Alter ego"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/iv_hero" />
+
+</RelativeLayout>
