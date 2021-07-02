@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/sucho/Documentos/Git/NKotlin/RegistroDeSuperheroes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/sucho/Documentos/Git/NKotlin/RegistroDeSuperheroes/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/sucho/Documentos/Git/NKotlin/RegistroDeSuperheroes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail.xml",
+        "source": "/home/sucho/Documentos/Git/NKotlin/RegistroDeSuperheroes/app/src/main/res/layout/activity_detail.xml"
+    }
+]
