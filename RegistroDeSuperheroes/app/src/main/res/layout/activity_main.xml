@@ -9,87 +9,96 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
+        android:layout_height="wrap_content"
         tools:context=".MainActivity">
 
-        <ImageView
-            android:id="@+id/iv_hero"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@android:drawable/ic_menu_camera" />
-
-        <EditText
-            android:id="@+id/et_name_hero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/iv_hero"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@id/iv_hero"
-            android:hint="Superhero name" />
-
-        <EditText
-            android:id="@+id/et_alter_ego"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/iv_hero"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@id/iv_hero"
-            android:hint="Alter ego" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/iv_hero"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/white" />
-
-        <TextView
-            android:id="@+id/tv_bio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/divider"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="Bio"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/et_bio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_bio"
-            android:layout_marginBottom="16dp"
-            android:hint="Short Bio" />
-
-        <TextView
-            android:id="@+id/tv_power"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/et_bio"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="Poder"
-            android:textSize="20sp" />
-
-        <RatingBar
-            android:id="@+id/rb_rating"
+        <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_power"
-            android:layout_centerHorizontal="true"
-            android:numStars="5"
-            android:rating="3.5"
-            android:stepSize="0.5" />
+            android:layout_height="match_parent">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_hero"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@android:drawable/ic_menu_camera" />
+
+                <EditText
+                    android:id="@+id/et_name_hero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_hero"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/iv_hero"
+                    android:hint="Superhero name" />
+
+                <EditText
+                    android:id="@+id/et_alter_ego"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_hero"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/iv_hero"
+                    android:hint="Alter ego" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_hero"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Bio"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_bio"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Short Bio" />
+
+                <TextView
+                    android:id="@+id/tv_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_bio"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Poder"
+                    android:textSize="20sp" />
+
+                <RatingBar
+                    android:id="@+id/rb_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_power"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.5" />
+
+            </RelativeLayout>
+        </ScrollView>
         <Button
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="Guardar" />
-
     </RelativeLayout>
 </layout>

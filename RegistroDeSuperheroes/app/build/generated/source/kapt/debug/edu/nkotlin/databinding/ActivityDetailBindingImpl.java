@@ -21,7 +21,7 @@ public class ActivityDetailBindingImpl extends ActivityDetailBinding  {
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final android.widget.ScrollView mboundView0;
     // variables
     // values
     // listeners
@@ -41,7 +41,7 @@ public class ActivityDetailBindingImpl extends ActivityDetailBinding  {
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[8]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.rbShowRating.setTag(null);
         this.tvDetailsAlterEgo.setTag(null);

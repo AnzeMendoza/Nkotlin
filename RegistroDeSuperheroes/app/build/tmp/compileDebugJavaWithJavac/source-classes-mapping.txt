@@ -4,10 +4,8 @@ edu/nkotlin/BR.java
  edu.nkotlin.BR
 edu/nkotlin/databinding/ActivityMainBinding.java
  edu.nkotlin.databinding.ActivityMainBinding
-edu/nkotlin/DataBinderMapperImpl.java
- edu.nkotlin.DataBinderMapperImpl
- edu.nkotlin.DataBinderMapperImpl$InnerBrLookup
- edu.nkotlin.DataBinderMapperImpl$InnerLayoutIdLookup
+edu/nkotlin/databinding/ActivityMainBindingImpl.java
+ edu.nkotlin.databinding.ActivityMainBindingImpl
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
 edu/nkotlin/BuildConfig.java
@@ -18,7 +16,9 @@ androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-edu/nkotlin/databinding/ActivityMainBindingImpl.java
- edu.nkotlin.databinding.ActivityMainBindingImpl
+edu/nkotlin/DataBinderMapperImpl.java
+ edu.nkotlin.DataBinderMapperImpl
+ edu.nkotlin.DataBinderMapperImpl$InnerBrLookup
+ edu.nkotlin.DataBinderMapperImpl$InnerLayoutIdLookup
 edu/nkotlin/databinding/ActivityDetailBindingImpl.java
  edu.nkotlin.databinding.ActivityDetailBindingImpl
